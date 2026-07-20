@@ -1,0 +1,12 @@
+Behavioral RDM Outlier Detection
+================================
+Participants: 36
+z cutoff: -1.645
+Outliers: 5
+
+Outlier files:
+Meadows_letter_similarity_v_v20_annotations_rdm.csv
+Meadows_letter_similarity_v_v21_luxurious-oarfish_annotations_rdm.csv
+Meadows_letter_similarity_v_v23_enhanced-sailfish_annotations_rdm.csv
+Meadows_letter_similarity_v_v23_enormous-manatee_annotations_rdm.csv
+Meadows_letter_similarity_v_v23_glad-stag_annotations_rdm.csv
