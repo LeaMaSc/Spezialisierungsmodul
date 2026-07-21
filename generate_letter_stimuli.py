@@ -34,7 +34,7 @@ font_size_large = 750
 no_flip_letters = ['b', 'd', 'p', 'q']
 
 # Full letter set: 4 ambiguous + 7 unambiguous
-letters = ['b', 'd', 'p', 'q', 'f', 'h', 'e', 'a', 'k', 'c', 'r']
+letters = ['b', 'd', 'p', 'q', 'f', 'h', 'e', 'a', 'k', 'r']
 
 output_dir = 'letter_stimuli'
 os.makedirs(output_dir, exist_ok=True)
@@ -170,5 +170,3 @@ for letter in letters:
 
 print("=" * 50)
 print(f"Done! {counter} images created in '{output_dir}/'")
-print(f"Expected: 4×3 + 7×5 = {4*3 + 7*5} stimuli")
-print(f"Pairwise pairs: {counter} × {counter-1} // 2 = {counter*(counter-1)//2}")

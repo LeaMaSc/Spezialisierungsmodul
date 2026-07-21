@@ -34,6 +34,9 @@ data_files = [
     if f.endswith(".csv")
 ]
 
+if not data_files:
+    raise FileNotFoundError(f"No CSV files found in behavioral data directory: {DATA_PATH}")
+
 # ── Stimulus order ────────────────────────────────────────────────────────
 
 ORDER = [

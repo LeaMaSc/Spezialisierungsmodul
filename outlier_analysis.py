@@ -22,7 +22,7 @@ alpha = 0.05
 z_cutoff = norm.ppf(alpha)
 
 current_path = os.path.dirname(os.path.abspath(__file__))
-rdm_dir = os.path.join(current_path, "rdms", "behavior")
+rdm_dir = os.path.join(current_path, "results", "behavior", "rdms")
 results_dir = os.path.join(current_path, "results", "behavior")
 os.makedirs(results_dir, exist_ok=True)
 

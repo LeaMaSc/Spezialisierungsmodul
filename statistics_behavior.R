@@ -188,7 +188,7 @@ compute_paired_d <- function(df, cond1, cond2) {
 # =========================================================================
 
 files <- list.files(
-  "../rdms/behavior",
+  "results/behavior/rdms",
   pattern = "\\.csv$",
   full.names = TRUE
 )
