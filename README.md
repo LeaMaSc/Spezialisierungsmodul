@@ -97,7 +97,7 @@ dissimilarity matrices (RDMs) and analyzed with a repeated-measures ANOVA.
 
 ## Dependencies
 
-**Python:** `numpy`, `pandas`, `seaborn`, `matplotlib`, `scipy`, `statsmodels`, plus the local
+**Python:** `numpy`, `pandas`, `seaborn`, `matplotlib`, `scikit-learn`, `scipy`, `statsmodels`, plus the local
 `rsatools` module (`rdm_to_vector`, `visualize_rdm`, `build_similarity_matrix`,
 `compute_rdm_from_meadows`).
 
