@@ -1,4 +1,11 @@
-"""Detect outlier participants from behavioral RDM similarity."""
+"""
+Detect outlier participants based on behavioral RDM similarity.
+
+Vectorizes each participant's RDM (upper triangle), computes pairwise
+Spearman correlations across participants, and flags anyone whose mean
+similarity to all others falls below a one-sided z-cutoff (z < -1.645,
+alpha = .05). Writes per-participant results and a summary to results/behavior/.
+"""
 
 import os
 
@@ -6,8 +13,6 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm, zscore
 from rsatools.behavioral import rdm_to_vector, build_similarity_matrix
-
-
 
 # -------------------------------------------------------------------------
 # Settings

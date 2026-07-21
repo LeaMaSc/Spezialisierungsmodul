@@ -20,8 +20,13 @@ from rsatools import visualize_rdm, compute_rdm_from_meadows
 
 CURRENT_PATH     = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH        = os.path.join(CURRENT_PATH, "../multiarrangementtask", "behavioral_data")
-OUTPUT_PATH_RDMS = os.path.join(CURRENT_PATH, "rdms/behavior")
-OUTPUT_PATH_FIGS = os.path.join(CURRENT_PATH, "figures/behavior")
+OUTPUT_PATH_RDMS = os.path.join(CURRENT_PATH, "results/behavior/rdms")
+OUTPUT_PATH_FIGS = os.path.join(CURRENT_PATH, "figures/rdms")
+
+if not os.path.exists(OUTPUT_PATH_RDMS):
+    os.makedirs(OUTPUT_PATH_RDMS)
+if not os.path.exists(OUTPUT_PATH_FIGS):
+    os.makedirs(OUTPUT_PATH_FIGS)
 
 data_files = [
     os.path.join(DATA_PATH, f)

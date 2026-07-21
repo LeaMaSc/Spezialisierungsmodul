@@ -5,8 +5,11 @@
 Comparing reversible and non-reversible letters using a multi-arrangement (inverse MDS) task.
 
 **Author:** Lea Marie Schmitt
+
 **Supervisor:** Prof. Dr. Katharina Dobs (FB 07)
+
 **Program:** Master Data Analytics, Justus-Liebig-Universität Gießen
+
 **Module:** Spezialisierungsmodul, SoSe 2026
 
 ## Overview
@@ -34,8 +37,8 @@ dissimilarity matrices (RDMs) and analyzed with a repeated-measures ANOVA.
 ├── letter_stimuli/            # Generated stimuli, organized by base letter
 ├── multiarrangementtask/      # Optional external input directory (not present in this snapshot)
 │   └── behavioral_data/       # Raw per-participant CSV exports from Meadows (not tracked)
-├── rdms/behavior/              # Per-participant RDMs (+ mean/ subfolder), written by analysis_behav.py
-├── figures/behavior/           # Per-participant RDM plots, written by analysis_behav.py
+├── results/behavior/rdms              # Per-participant RDMs (+ mean/ subfolder), written by analysis_behav.py
+├── figures/rdms/           # Per-participant RDM plots, written by analysis_behav.py
 ├── figures/                    # Notebook-generated figures (mean RDM, correlation matrix, bar plots)
 └── results/behavior/           # Outlier detection outputs, written by outlier_analysis.py
 ```
@@ -46,9 +49,10 @@ dissimilarity matrices (RDMs) and analyzed with a repeated-measures ANOVA.
    Reads raw Meadows CSV exports from `multiarrangementtask/behavioral_data/`, computes one
    42x42 RDM per participant (pairwise Euclidean distances between co-occurring stimuli across
    trials), and writes:
-   - `rdms/behavior/<participant>_rdm.csv` — per-participant RDM
-   - `figures/behavior/<participant>.png` — per-participant RDM heatmap
-   - `rdms/behavior/mean/mean_behavior_rdm.csv` — group-mean RDM
+   - `results/behavior/rdms/<participant>_rdm.csv` — per-participant RDM
+   - `figures/rdms/<participant>.png` — per-participant RDM heatmap
+   - `results/behavior/rdms/mean/mean_behavior_rdm.csv` — group-mean RDM 
+   - `figures/rdms/mean/mean_behavior_rdm.png` — group-mean RDM heatmap
 
 2. **`outlier_analysis.py`**
    Loads all per-participant RDMs, vectorizes the upper triangle, computes a participant x
